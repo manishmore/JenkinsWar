@@ -47,7 +47,7 @@ node {
             sh 'pwd'
             sh 'ls -al'
             sh 'env'
-            print "Result " + pipeline.mycommoncode()
+            print "Result " + pipeline.testMethod()
       }
 }
 

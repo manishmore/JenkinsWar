@@ -1,3 +1,7 @@
-def mycommoncode(){
- echo "ParamsFile.groovy"
+print("Loaded class MyClass.groovy")
+
+String testMethod() {
+  return "OK!"
 }
+
+return this
