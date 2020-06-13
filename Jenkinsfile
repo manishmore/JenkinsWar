@@ -41,7 +41,7 @@ pipeline {
 
   node {
   def ParamsFile
-  ParamsFile = load "${WORKSPACE}"+“/ParamsFile.groovy”
+  ParamsFile = load “/Users/Shared/Jenkins/Home/workspace/Groovy-build/ParamsFile.groovy”
       stage('end of the file') {
             echo "===== ${WORKSPACE}"
             sh 'pwd'
