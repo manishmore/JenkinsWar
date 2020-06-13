@@ -20,6 +20,7 @@ pipeline {
         stage ('Speak') {
             steps{
               echo "Hello, CONDITIONAL"
+              showMavenVersion("--maven")
             }
           }
         stage('build') {
@@ -33,4 +34,8 @@ pipeline {
                 }
         }
     }
+}
+
+def showMavenVersion(String a) {
+    echo a
 }
