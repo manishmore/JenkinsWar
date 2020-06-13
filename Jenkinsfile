@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    def common = load “ParamsFile.groovy”
+    def ParamsFile = load “ParamsFile.groovy”
     stages {
         stage("Run unit tests"){
           steps {
@@ -36,7 +36,7 @@ pipeline {
         }
         stage('end of the file') {
             steps {
-               common.mycommoncode()
+               ParamsFile.mycommoncode()
             }
         }
     }
