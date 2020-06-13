@@ -1,8 +1,23 @@
 pipeline {
     agent any
-
     stages {
-    try {
+        stage("Run unit tests"){
+          steps {
+            script {
+              try {
+              echo "Hello, CONDITIONAL----"
+              } finally {
+                junit 'nosetests.xml'
+              }
+            }
+          }
+        }
+        stage ('Speak') {
+            steps{
+              echo "Hello, CONDITIONAL"
+            }
+          }
+        }
         stage('build') {
             steps {
                 echo "Size ${params.size}"
@@ -19,10 +34,4 @@ pipeline {
                 echo "test:color"
             }
         }
-    }finally {
-        echo "IN finally stage..."
-        //emailext subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - FAILURE (${e.message})!", to: "me@me.com",body: "..."
-        //throw e; // rethrow so the build is considered failed
-    }
-    }
 }
