@@ -9,8 +9,10 @@ pipeline {
               test
               }catch(Exception ex) {
                 println("Catching the exception");
+                currentBuild.result = 'FAILURE'
               } finally {
                 echo "finally..."
+                echo currentBuild.result
               }
             }
           }
