@@ -36,9 +36,10 @@ pipeline {
         stage("Determine build file") {
             String jenkinsFile = ParamsFile.groovy
         }
-        // Here the Jenkins build file is loaded and executed
-        load jenkinsFile
     }
+
+    // Here the Jenkins build file is loaded and executed
+    load jenkinsFile
 }
 
 def showMavenVersion(String a) {
