@@ -39,9 +39,6 @@ pipeline {
             }
         }
     }
-
-    // Here the Jenkins build file is loaded and executed
-    load jenkinsFile
 }
 
 def showMavenVersion(String a) {
