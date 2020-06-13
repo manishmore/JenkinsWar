@@ -38,10 +38,8 @@ pipeline {
 
 node {
 stage('end of the file') {
-    steps {
       echo "====="
       // ParamsFile.mycommoncode()
-    }
 }
 }
 
