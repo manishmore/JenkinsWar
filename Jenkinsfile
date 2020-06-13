@@ -1,7 +1,7 @@
 pipeline {
     agent any
+    def common = load “ParamsFile.groovy”
     stages {
-      def common = load “ParamsFile.groovy”
         stage("Run unit tests"){
           steps {
             script {
@@ -34,7 +34,7 @@ pipeline {
                     echo "Color ${params.color}"
                 }
         }
-        stage("Determine build file") {
+        stage('end of the file') {
             steps {
                common.mycommoncode()
             }
