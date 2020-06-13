@@ -38,7 +38,7 @@ pipeline {
 
 node {
 def ParamsFile
-ParamsFile = load “${WORKSPACE}/ParamsFile.groovy”
+ParamsFile = load "${WORKSPACE}"+“/ParamsFile.groovy”
 
 stage('end of the file') {
       echo "===== ${WORKSPACE}"
