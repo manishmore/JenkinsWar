@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    def ParamsFile = load “ParamsFile.groovy”
     stages {
         stage("Run unit tests"){
           steps {
@@ -36,11 +35,21 @@ pipeline {
         }
         stage('end of the file') {
             steps {
-               ParamsFile.mycommoncode()
+               //ParamsFile.mycommoncode()
             }
         }
     }
 }
+
+node {
+stage('end of the file') {
+    steps {
+      echo "====="
+      // ParamsFile.mycommoncode()
+    }
+}
+}
+
 
 def showMavenVersion(String a) {
     echo a
