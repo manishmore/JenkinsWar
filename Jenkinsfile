@@ -42,6 +42,7 @@ def ParamsFile
 
 stage('end of the file') {
       echo "===== ${WORKSPACE}"
+      sh 'pwd'
       sh 'ls -al'
       sh 'env'
       //ParamsFile.mycommoncode()
