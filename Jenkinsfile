@@ -38,14 +38,14 @@ pipeline {
 
 node {
 def ParamsFile
-//ParamsFile = load “ParamsFile.groovy”
+ParamsFile = load “${WORKSPACE}/ParamsFile.groovy”
 
 stage('end of the file') {
       echo "===== ${WORKSPACE}"
       sh 'pwd'
       sh 'ls -al'
       sh 'env'
-      //ParamsFile.mycommoncode()
+      ParamsFile.mycommoncode()
 }
 }
 
