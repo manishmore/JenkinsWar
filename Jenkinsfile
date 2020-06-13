@@ -41,7 +41,8 @@ def ParamsFile = load “ParamsFile.groovy”
 
 stage('end of the file') {
       echo "====="
-      ParamsFile.mycommoncode()
+      sh 'env'
+      //ParamsFile.mycommoncode()
 }
 }
 
