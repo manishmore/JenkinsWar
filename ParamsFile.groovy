@@ -1,1 +1,3 @@
-echo "ParamsFile.groovy"
+def mycommoncode(){
+ echo "ParamsFile.groovy"
+}

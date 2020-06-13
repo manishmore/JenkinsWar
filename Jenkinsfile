@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+      def common = load “ParamsFile.groovy”
         stage("Run unit tests"){
           steps {
             script {
@@ -35,7 +36,7 @@ pipeline {
         }
         stage("Determine build file") {
             steps {
-            String jenkinsFile = ParamsFile.groovy
+               common.mycommoncode()
             }
         }
     }
