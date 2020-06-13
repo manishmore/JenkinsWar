@@ -33,11 +33,6 @@ pipeline {
                     echo "Color ${params.color}"
                 }
         }
-        stage('end of the file') {
-            steps {
-               //ParamsFile.mycommoncode()
-            }
-        }
     }
 }
 
