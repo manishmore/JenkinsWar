@@ -6,6 +6,9 @@ pipeline {
             script {
               try {
               echo "Hello, CONDITIONAL----"
+              test
+              }catch(Exception ex) {
+                println("Catching the exception");
               } finally {
                 echo "finally..."
               }
@@ -17,16 +20,15 @@ pipeline {
               echo "Hello, CONDITIONAL"
             }
           }
-            stage('build') {
+        stage('build') {
                 steps {
                     echo "Size ${params.size}"
                 }
-            }
-            stage('deploy') {
+        }
+        stage('deploy') {
                 steps {
                     echo "Color ${params.color}"
                 }
-            }
         }
-
+    }
 }
