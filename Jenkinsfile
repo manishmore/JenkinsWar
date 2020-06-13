@@ -39,17 +39,17 @@ pipeline {
     }
 }
 
-  node {
-  def ParamsFile
-  ParamsFile = load “/Users/Shared/Jenkins/Home/workspace/Groovy-build/ParamsFile.groovy”
+def pipeline
+node {
+  pipeline = load 'pipeline.groovy'
       stage('end of the file') {
             echo "===== ${WORKSPACE}"
             sh 'pwd'
             sh 'ls -al'
             sh 'env'
-            ParamsFile.mycommoncode()
+            print "Result " + pipeline.mycommoncode()
       }
-  }
+}
 
 
 def showMavenVersion(String a) {
