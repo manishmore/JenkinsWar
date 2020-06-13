@@ -34,7 +34,9 @@ pipeline {
                 }
         }
         stage("Determine build file") {
+            steps {
             String jenkinsFile = ParamsFile.groovy
+            }
         }
     }
 
