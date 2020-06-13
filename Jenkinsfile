@@ -36,18 +36,17 @@ pipeline {
     }
 }
 
-node {
-def ParamsFile
-ParamsFile = load "${WORKSPACE}"+“/ParamsFile.groovy”
-
-stage('end of the file') {
-      echo "===== ${WORKSPACE}"
-      sh 'pwd'
-      sh 'ls -al'
-      sh 'env'
-      ParamsFile.mycommoncode()
-}
-}
+  node {
+  def ParamsFile
+  ParamsFile = load "${WORKSPACE}"+“/ParamsFile.groovy”
+      stage('end of the file') {
+            echo "===== ${WORKSPACE}"
+            sh 'pwd'
+            sh 'ls -al'
+            sh 'env'
+            ParamsFile.mycommoncode()
+      }
+  }
 
 
 def showMavenVersion(String a) {
