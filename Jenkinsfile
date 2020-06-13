@@ -37,7 +37,8 @@ pipeline {
 }
 
 node {
-def ParamsFile = load “ParamsFile.groovy”
+def ParamsFile
+//ParamsFile = load “ParamsFile.groovy”
 
 stage('end of the file') {
       echo "====="
