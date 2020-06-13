@@ -7,7 +7,8 @@ pipeline {
               try {
               echo "Hello, CONDITIONAL----"
               } finally {
-                junit 'nosetests.xml'
+                echo "finally..."
+                j//unit 'nosetests.xml'
               }
             }
           }
@@ -17,21 +18,5 @@ pipeline {
               echo "Hello, CONDITIONAL"
             }
           }
-        }
-        stage('build') {
-            steps {
-                echo "Size ${params.size}"
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo "Color ${params.color}"
-            }
-        }
-        stage('build-test') {
-            steps {
-                sh "docker --version"
-                echo "test:color"
-            }
         }
 }
