@@ -9,7 +9,7 @@ pipeline {
               test
               }catch(Exception ex) {
                 println("Catching the exception");
-                currentBuild.result = 'FAILURE'
+                currentBuild.result = 'UNSTABLE'
               } finally {
                 echo "finally..."
                 echo currentBuild.result
