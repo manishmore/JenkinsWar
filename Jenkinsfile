@@ -8,7 +8,6 @@ pipeline {
               echo "Hello, CONDITIONAL----"
               } finally {
                 echo "finally..."
-                j//unit 'nosetests.xml'
               }
             }
           }
@@ -18,5 +17,16 @@ pipeline {
               echo "Hello, CONDITIONAL"
             }
           }
+            stage('build') {
+                steps {
+                    echo "Size ${params.size}"
+                }
+            }
+            stage('deploy') {
+                steps {
+                    echo "Color ${params.color}"
+                }
+            }
         }
+
 }
