@@ -41,7 +41,8 @@ def ParamsFile
 //ParamsFile = load “ParamsFile.groovy”
 
 stage('end of the file') {
-      echo "====="
+      echo "===== ${WORKSPACE}"
+      sh 'ls -al'
       sh 'env'
       //ParamsFile.mycommoncode()
 }
