@@ -55,6 +55,9 @@ node {
 def showMavenVersion(String a) {
      try {
       test090
+      } catch (Exception e) {
+       echo "Error" + e
+       throw new Exception(e);
      } finally {
      echo "finally::" + a
      }
