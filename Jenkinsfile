@@ -53,5 +53,9 @@ node {
 
 
 def showMavenVersion(String a) {
-    echo a
+     try {
+      test090
+     } finally {
+     echo "finally::" + a
+     }
 }
