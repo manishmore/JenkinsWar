@@ -54,7 +54,15 @@ node {
 
 def showMavenVersion(String a) {
      try {
-      test090
+     def tmpHM = ['test','test2','test3','tests6']
+     tmpHM.each{
+      try {
+        echo "TEST:"+it
+         test090
+       } catch(Exception e2) {
+        echo "Error:" + e2
+      }
+    }
       } catch (Exception e) {
        echo "Error" + e
        throw new Exception(e);
